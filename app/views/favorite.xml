@@ -1,0 +1,31 @@
+<Alloy>
+	<Collection src="item" />
+	<Window class="container">
+		<Widget src="com.hashapps.widgets.titlebar" id="header"/>
+		<View id="mid">
+						
+			<ListView id="list" >
+				
+				<Templates>
+					
+					<ItemTemplate id="item" name="mt3m">
+						<View>
+							<ImageView bindId="image" id="image"></ImageView>
+							<Label bindId="name" id="itemTitle"></Label>
+						</View>
+					</ItemTemplate>
+					
+				</Templates>
+				
+				<ListSection id="section" dataCollection="item">
+					<ListItem template="mt3m" name:text="{name}" image:image="{image}"/>
+				</ListSection>
+				
+			</ListView>
+			
+		</View>
+		<View id="Ads" >
+			
+		</View>
+	</Window>
+</Alloy>

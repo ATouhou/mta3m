@@ -1,0 +1,62 @@
+".container" : {
+  backgroundColor : "white",
+  layout : "vertical"
+}
+
+"#header":{
+	width : Ti.UI.FILL,
+	height : "10%"
+}
+
+"#mid": {
+	layout : "horizontal",
+	width : Ti.UI.FILL,
+	height : "80%",
+	backgroundColor : "black",
+	
+}
+
+"#search": {
+	left : 0,
+	width : "10%",
+	height : Ti.UI.FILL ,
+	backgroundColor : "red"
+}
+
+"#list": {
+	width : "90%",
+	height : Ti.UI.FILL,
+	backgroundColor : "green",
+	textAlign: 'right',
+	
+}
+
+"#Ads": {
+	bottom : 0 ,
+	width : Ti.UI.FILL,
+	height : "15%",
+	backgroundColor : "blue"
+}
+
+"#item": {	
+	layout:'horizontal',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE,
+	right:10
+}
+"#image": {
+	right : 0 ,
+	width : 50,
+	height : 50,
+}
+"#itemTilte": {
+	color : "black",
+	right : 5 ,
+	textAlign : 'right'
+}
+
+"#add": {
+	left : 0 ,
+	height : Ti.UI.FILL,
+	width : 35 
+}

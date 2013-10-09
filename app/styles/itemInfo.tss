@@ -1,0 +1,52 @@
+".container" : {
+  backgroundColor : "white",
+  layout : "vertical"
+}
+
+".lbl": {
+	color : "white"
+}
+
+"#header":{
+	width : Ti.UI.FILL,
+	height : "10%"
+}
+
+"#mid": {
+	layout : "horizontal",
+	height : "35%",
+	width : Ti.UI.FILL,
+	backgroundColor : "red"
+}
+"#nums": {
+	left : 0,
+	width : "50%",
+	height : Ti.UI.FILL,
+	backgroundColor : "black",
+	layout : "vertical"
+}
+
+"#number1": {
+	top : 10
+}
+
+"#desc": {
+	width : "50%",
+	height : Ti.UI.FILL,
+	backgroundColor : "yellow"
+}
+
+"#mapView": {
+	bottom : 5 ,
+	height : "60%",
+	width :  Ti.UI.FILL
+}
+
+"#wsalny": {
+	width : "80%",
+	bottom : 10
+}
+
+"#phone": {
+	top : 10
+}

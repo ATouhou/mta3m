@@ -1,0 +1,23 @@
+<Alloy>
+	<Window class="container">
+		<Widget src="com.hashapps.widgets.titlebar" id="header"/>
+		<View id="mid" >
+			
+			<View id="nums">
+				<Label id="number1" class="lbl"></Label>
+				<Label id="number2" class="lbl"></Label>
+				<Label id="number3" class="lbl"></Label>
+			</View>
+			
+			<View id="desc">
+				<Label id="phone">ارقام الاتصال</Label>
+				<Button id="wsalny" onClick="favorites">وصلنى</Button>
+			</View>
+			
+		</View>
+		
+		<View id="mapView" ns="Ti.Map" animate="true"
+		regionFit="true"
+		mapType="Ti.Map.STANDARD_TYPE"></View>
+	</Window>
+</Alloy>

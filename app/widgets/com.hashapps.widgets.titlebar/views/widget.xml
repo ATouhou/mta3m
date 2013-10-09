@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="background">
+		<Label id="lblTitle">View Title</Label>
+		<ImageView id="imgLogo"></ImageView>
+		<Button id="rightNavButton" />
+		<Button id="leftNavButton" onClick="doClick" />
+	</View>
+</Alloy>

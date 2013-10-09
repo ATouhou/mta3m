@@ -1,0 +1,102 @@
+'Label[platform=android]': {
+    color: '#000' // all platforms except Android default to black 
+}
+ 
+'Window': {
+    backgroundColor: '#fff' // white background instead of default transparent
+}
+ 
+'Window[platform=android]': {
+    modal: false // make android windows all heavyweight
+}
+ 
+'TextField': {
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED // common default style
+}
+ 
+'ImageView[platform=ios]': {
+    preventDefaultImage: true // never show ugly image while loading remote
+}
+ 
+'.horizontal':{
+    layout: 'horizontal'
+}
+ 
+'.vertical':{
+    layout: 'vertical'
+}
+ 
+'fill':{
+    width: '100%',
+    height: '100%'
+}
+ 
+'.halfWidth':{
+    width: '50%'
+}
+ 
+'.halfHeight':{
+    height: '50%'
+}
+ 
+'.size':{
+    height: Ti.UI.SIZE,
+    width: Ti.UI.SIZE
+}
+'.sizeHeight':{
+    height: Ti.UI.SIZE
+}
+ 
+'.sizeWidth':{
+    width: Ti.UI.SIZE
+}
+ 
+'.h1':{
+    font:{
+        fontSize: 20,
+        fontWeight: 'bold'
+    }
+}
+ 
+'.h2':{
+    font:{
+        fontSize: 18,
+        fontWeight: 'bold'
+    }
+}
+ 
+'.pdLeft10':{
+    left: 10
+}
+ 
+'.pdLeft0':{
+    left: 0
+}
+ 
+'.pdRight10':{
+    right: 10
+}
+ 
+'.pdRight0':{
+    right: 0
+}
+ 
+'.pdTop0':{
+    top: 0
+}
+ 
+'.pdTop5':{
+    top: 5
+}
+ 
+'.pdTop10':{
+    top: 10
+}
+ 
+'.alignRight':{
+    textAlign: 'right'
+}
+ 
+'.border':{
+    borderWidth: 1
+}
