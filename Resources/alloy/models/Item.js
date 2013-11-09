@@ -4,17 +4,21 @@ exports.definition = {
             name: "text",
             image: "text",
             phoneNumbers: "text",
-            longitude: "real",
-            latitude: "real",
             isFavorite: "boolean"
         },
         adapter: {
             type: "sql",
-            collection_name: "item"
+            collection_name: "item",
+            idAttribute: "id",
+            db_file: "/db.sql"
         }
     },
     extendModel: function(Model) {
-        _.extend(Model.prototype, {});
+        _.extend(Model.prototype, {
+            defaults: {
+                isFavorite: false
+            }
+        });
         return Model;
     },
     extendCollection: function(Collection) {

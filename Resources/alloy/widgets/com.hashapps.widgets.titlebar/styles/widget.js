@@ -178,27 +178,34 @@ module.exports = [ {
     priority: 100000.0027,
     key: "lblTitle",
     style: {
-        font: Alloy.Globals.h1,
-        color: "black",
+        font: Alloy.Globals.customFont,
+        color: "white",
         width: "60%",
-        textAlign: "center"
+        textAlign: "center",
+        top: "25%"
     }
 }, {
     isId: true,
-    priority: 100000.0029,
+    priority: 100000.0028,
     key: "background",
     style: {
+        width: Ti.UI.FILL,
+        backgroundImage: "/images/header.png",
+        height: "14%",
+        textAlign: "center",
+        top: 0,
         backgroundColor: "white",
-        top: 0
+        title: {
+            top: "25%"
+        }
     }
 }, {
     isId: true,
     priority: 100000.003,
     key: "imgLogo",
     style: {
-        width: 36,
-        height: 36,
-        right: "2.5%"
+        width: Ti.UI.FILL,
+        height: Ti.UI.FILL
     }
 }, {
     isId: true,
@@ -206,9 +213,10 @@ module.exports = [ {
     key: "rightNavButton",
     style: {
         right: "2%",
+        top: "7%",
         title: "next",
-        height: "51.3%",
-        width: "9%",
+        height: "60%",
+        width: "12%",
         backgroundImage: "/images/btn_menu_icon_normal.png",
         backgroundSelectedImage: "/images/btn_menu_icon_pressed.png",
         visible: false,
@@ -223,9 +231,10 @@ module.exports = [ {
     key: "leftNavButton",
     style: {
         left: "2%",
-        width: "10%",
+        height: "60%",
+        width: "17%",
+        top: "7%",
         title: "ﺭﺟﻮﻉ",
-        height: "65%",
         visible: true,
         font: {
             fontSize: 12,
@@ -237,7 +246,7 @@ module.exports = [ {
     queries: {
         formFactor: "isTablet"
     },
-    priority: 100011.0028,
+    priority: 100011.0029,
     key: "lblTitle",
     style: {
         color: "black",

@@ -1,7 +1,10 @@
 <Alloy>
-	<Collection src="item" />
+	<Collection id="home" src="item" />
 	<Window class="container">
-		<Widget src="com.hashapps.widgets.titlebar" id="header"/>
+		
+		<Widget src="com.hashapps.widgets.titlebar" class="headImg" id="header"/>
+			
+	
 		<View id="mid">
 			<ScrollView id="search"></ScrollView>
 			
@@ -10,10 +13,10 @@
 				<Templates>
 					
 					<ItemTemplate id="item" name="mt3m">
-						<View onClick="openItemInfo">
-							<ImageView bindId="image" id="image"></ImageView>
+						<View onClick="openItemInfo" id="row">
+							<ImageView bindId="image" id="image" class="dfltImg"></ImageView>
 							<Label bindId="name" id="itemTitle"></Label>
-							<Button id="add" onClick="isFav">+</Button>
+							<ImageView class="arrow"></ImageView>
 						</View>
 					</ItemTemplate>
 					

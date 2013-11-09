@@ -1,33 +1,62 @@
 ".container" : {
-  backgroundColor : "white",
-  layout : "vertical"
+ backgroundImage : "/images/background.png",
+  layout : "vertical",
+  exitOnClose: true
 }
 
 "#header":{
 	width : Ti.UI.FILL,
-	height : "10%"
+
+	title:{
+		text:'مطاعم مصر',
+		color:'white'
+	},
+	font: {
+		fontSize: 12,
+		fontFamily: Alloy.Globals.customFont,
+		color : 'white'
+	},
+	leftNavButton:{
+		height : '60%',
+		width : "12%",
+		top : '7%',
+		title:'',
+		visible:true,
+		backgroundImage : '/images/btn_fav_normal.png',
+		backgroundSelectedImage : '/images/btn_fav_pressed.png',
+	},
 }
 
 "#mid": {
 	layout : "horizontal",
 	width : Ti.UI.FILL,
 	height : "80%",
-	backgroundColor : "black",
 	
 }
-
+".dfltImg":{
+	backgroundImage : '/images/default_icon.png'
+}
+"#row":{
+	backgroundImage : '/images/list.png',
+}
 "#search": {
 	left : 0,
-	width : "10%",
+	width : "5%",
 	height : Ti.UI.FILL ,
 	backgroundColor : "red"
 }
-
+".arrow": {
+	 backgroundImage : "/images/arrow.png",
+	 left : '5%',
+	width : '6%',
+	height : '45%'
+}
 "#list": {
-	width : "90%",
+	width : "95%",
 	height : Ti.UI.FILL,
-	backgroundColor : "green",
-	textAlign: 'right',
+	 backgroundImage : "/images/background.png",
+	 
+	 textAlign: 'right',
 	
 }
 
@@ -53,10 +82,4 @@
 	color : "black",
 	right : 5 ,
 	textAlign : 'right'
-}
-
-"#add": {
-	left : 0 ,
-	height : Ti.UI.FILL,
-	width : 35 
 }

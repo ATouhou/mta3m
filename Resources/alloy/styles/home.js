@@ -169,53 +169,94 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0044,
+    priority: 10000.0046,
     key: "container",
     style: {
-        backgroundColor: "white",
-        layout: "vertical"
+        backgroundImage: "/images/background.png",
+        layout: "vertical",
+        exitOnClose: true
     }
 }, {
-    isId: true,
-    priority: 100000.0045,
-    key: "header",
+    isClass: true,
+    priority: 10000.0049,
+    key: "dfltImg",
     style: {
-        width: Ti.UI.FILL,
-        height: "10%"
+        backgroundImage: "/images/default_icon.png"
     }
 }, {
-    isId: true,
-    priority: 100000.0046,
-    key: "mid",
+    isClass: true,
+    priority: 10000.0052,
+    key: "arrow",
     style: {
-        layout: "horizontal",
-        width: Ti.UI.FILL,
-        height: "80%",
-        backgroundColor: "black"
+        backgroundImage: "/images/arrow.png",
+        left: "5%",
+        width: "6%",
+        height: "45%"
     }
 }, {
     isId: true,
     priority: 100000.0047,
+    key: "header",
+    style: {
+        width: Ti.UI.FILL,
+        title: {
+            text: "مطاعم مصر",
+            color: "white"
+        },
+        font: {
+            fontSize: 12,
+            fontFamily: Alloy.Globals.customFont,
+            color: "white"
+        },
+        leftNavButton: {
+            height: "60%",
+            width: "12%",
+            top: "7%",
+            title: "",
+            visible: true,
+            backgroundImage: "/images/btn_fav_normal.png",
+            backgroundSelectedImage: "/images/btn_fav_pressed.png"
+        }
+    }
+}, {
+    isId: true,
+    priority: 100000.0048,
+    key: "mid",
+    style: {
+        layout: "horizontal",
+        width: Ti.UI.FILL,
+        height: "80%"
+    }
+}, {
+    isId: true,
+    priority: 100000.005,
+    key: "row",
+    style: {
+        backgroundImage: "/images/list.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0051,
     key: "search",
     style: {
         left: 0,
-        width: "10%",
+        width: "5%",
         height: Ti.UI.FILL,
         backgroundColor: "red"
     }
 }, {
     isId: true,
-    priority: 100000.0048,
+    priority: 100000.0053,
     key: "list",
     style: {
-        width: "90%",
+        width: "95%",
         height: Ti.UI.FILL,
-        backgroundColor: "green",
+        backgroundImage: "/images/background.png",
         textAlign: "right"
     }
 }, {
     isId: true,
-    priority: 100000.0049,
+    priority: 100000.0054,
     key: "Ads",
     style: {
         bottom: 0,
@@ -225,7 +266,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.005,
+    priority: 100000.0055,
     key: "item",
     style: {
         layout: "horizontal",
@@ -235,7 +276,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0051,
+    priority: 100000.0056,
     key: "image",
     style: {
         right: 0,
@@ -244,20 +285,11 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0052,
+    priority: 100000.0057,
     key: "itemTilte",
     style: {
         color: "black",
         right: 5,
         textAlign: "right"
-    }
-}, {
-    isId: true,
-    priority: 100000.0053,
-    key: "add",
-    style: {
-        left: 0,
-        height: Ti.UI.FILL,
-        width: 35
     }
 } ];

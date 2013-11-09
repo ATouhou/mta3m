@@ -1,50 +1,87 @@
 ".container" : {
-  backgroundColor : "white",
-  layout : "vertical"
+	layout : "vertical",
+	backgroundImage : '/images/background.png'
+  
 }
 
+".phoneBack":{
+	top : 3,
+	backgroundImage : '/images/phone_box.png',
+	width : '90%',
+	height : '17%'
+}
 ".lbl": {
-	color : "white"
+	color : "black",
 }
 
 "#header":{
 	width : Ti.UI.FILL,
-	height : "10%"
+	height : "14%",
+	title : {
+		top : "25%"
+	},
+	rightNavButton:{
+		height : '60%',
+		width : "12%",
+		top : '7%',
+		title:'',
+		visible:true,
+		//backgroundImage : '/images/btn_fav_normal.png',
+		//backgroundSelectedImage : '/images/btn_fav_pressed.png',
+	},
+	leftNavButton:{
+		height : '60%',
+		width : "17%",
+		top : '7%',
+		title:'',
+		visible:true,
+		backgroundImage : '/images/btn_back_normal.png',
+		backgroundSelectedImage : '/images/btn_back_pressed.png'
+	}
 }
 
 "#mid": {
 	layout : "horizontal",
-	height : "35%",
+	height : "40%",
 	width : Ti.UI.FILL,
-	backgroundColor : "red"
 }
-"#nums": {
-	left : 0,
-	width : "50%",
+"#info": {
+	//left : 0,
+	width : "60%",
 	height : Ti.UI.FILL,
-	backgroundColor : "black",
 	layout : "vertical"
 }
 
-"#number1": {
-	top : 10
+"#imgAndTit": {
+	width : Ti.UI.FILL,
+	height : "40%",
 }
-
-"#desc": {
-	width : "50%",
-	height : Ti.UI.FILL,
-	backgroundColor : "yellow"
+"#mt3mTitle": {
+	//left : '20%' ,
+	//textAlign : 'right'
+}
+"#mt3mPic": {
+	right : '5%' ,
+	width : "25%",
+	height : '75%',
+	backgroundImage : "/images/default_icon.png"
+}
+"#number1": {
+	top : 10,
+	color : "black",
 }
 
 "#mapView": {
-	bottom : 5 ,
+	bottom : 0 ,
 	height : "60%",
 	width :  Ti.UI.FILL
 }
 
 "#wsalny": {
-	width : "80%",
-	bottom : 10
+	width : "40%",
+	height : Ti.UI.FILL,
+	backgroundImage : '/images/btn_waslny_normal.png',
+	backgroundSelectedImage : '/images/btn_waslny_pressed.png'
 }
 
 "#phone": {

@@ -1,9 +1,24 @@
 "#lblTitle": {
-	font: Alloy.Globals.h1,
-	color:"black",
+	font: Alloy.Globals.customFont,
+	color:"white",
 	width: '60%',
-	textAlign: 'center'
+	textAlign: 'center',
+	top : '25%'
 }
+"#background":{
+	
+	width : Ti.UI.FILL,
+	backgroundImage : '/images/header.png',
+	height : "14%",
+	textAlign: 'center',
+	top:0,
+	backgroundColor : "white",
+	title : {
+		top : "25%"
+	},
+	
+}
+
 
 '#lblTitle[formFactor=tablet]':{
 	color:"black",
@@ -11,20 +26,23 @@
 	textAlign: 'center'
 }
 
-"#background":{
-	backgroundColor: 'white',
-	top:0
-}
+// "#background":{
+	// backgroundImage : '/images/header.png',
+	// width : Ti.UI.FILL,
+	// height : Ti.UI.FILL,
+	// top:0,
+	// backgroundColor : "white"
+// }
 "#imgLogo":{
-	width: 36,
-	height: 36,
-	right: '2.5%'
+	width : Ti.UI.FILL,
+	height : Ti.UI.FILL,
 }
 "#rightNavButton" :{
-    right: "2%",
-    title: 'next',
-    height: '51.3%',
-    width: "9%",
+   right: "2%",
+   top : '7%',
+   title: 'next',
+   height : '60%',
+   width : "12%",
     backgroundImage: '/images/btn_menu_icon_normal.png',
 	backgroundSelectedImage: '/images/btn_menu_icon_pressed.png',
     visible: false,
@@ -35,9 +53,10 @@
 }
 "#leftNavButton" :{
     left: '2%',
-    width: "10%",
+    height : '60%',
+	width : "17%",
+	top : '7%',
     title: 'ﺭﺟﻮﻉ',
-	height: '65%',
     visible: true,
     font: {
 		fontSize: 12,

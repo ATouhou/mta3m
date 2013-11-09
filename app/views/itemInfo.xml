@@ -1,18 +1,28 @@
 <Alloy>
+	<Collection src="item" />
 	<Window class="container">
 		<Widget src="com.hashapps.widgets.titlebar" id="header"/>
 		<View id="mid" >
 			
-			<View id="nums">
-				<Label id="number1" class="lbl"></Label>
-				<Label id="number2" class="lbl"></Label>
-				<Label id="number3" class="lbl"></Label>
+			<View id="info">
+				<View id="imgAndTit">
+					<Label id="mt3mTitle"></Label>
+					<ImageView id="mt3mPic"></ImageView>
+				</View>
+				<ImageView class="phoneBack">					
+				<Label id="number1" class="lbl">012345679</Label>
+				</ImageView>
+				<ImageView class="phoneBack">
+				<Label id="number2" class="lbl">012345679</Label>
+				</ImageView>
+				<ImageView class="phoneBack">					
+				<Label id="number3" class="lbl">012345679</Label>
+				</ImageView>
 			</View>
 			
-			<View id="desc">
-				<Label id="phone">ارقام الاتصال</Label>
-				<Button id="wsalny" onClick="favorites">وصلنى</Button>
-			</View>
+		
+				<Button id="wsalny"></Button>
+		
 			
 		</View>
 		

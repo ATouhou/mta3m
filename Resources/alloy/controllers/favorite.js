@@ -1,24 +1,48 @@
 function Controller() {
-    function __alloyId17() {
-        var opts = __alloyId17.opts || {};
-        var models = __alloyId16.models;
+    function __alloyId16() {
+        var opts = __alloyId16.opts || {};
+        var models = __alloyId15.models;
         var len = models.length;
-        var __alloyId11 = [];
+        var __alloyId10 = [];
         for (var i = 0; len > i; i++) {
-            var __alloyId13 = models[i];
-            __alloyId13.__transform = {};
-            var __alloyId15 = {
+            var __alloyId12 = models[i];
+            __alloyId12.__transform = {};
+            var __alloyId14 = {
                 template: "mt3m",
                 name: {
-                    text: "undefined" != typeof __alloyId13.__transform["name"] ? __alloyId13.__transform["name"] : __alloyId13.get("name")
+                    text: "undefined" != typeof __alloyId12.__transform["name"] ? __alloyId12.__transform["name"] : __alloyId12.get("name")
                 },
                 image: {
-                    image: "undefined" != typeof __alloyId13.__transform["image"] ? __alloyId13.__transform["image"] : __alloyId13.get("image")
+                    image: "undefined" != typeof __alloyId12.__transform["image"] ? __alloyId12.__transform["image"] : __alloyId12.get("image")
                 }
             };
-            __alloyId11.push(__alloyId15);
+            __alloyId10.push(__alloyId14);
         }
-        opts.animation ? $.__views.section.setItems(__alloyId11, opts.animation) : $.__views.section.setItems(__alloyId11);
+        opts.animation ? $.__views.section.setItems(__alloyId10, opts.animation) : $.__views.section.setItems(__alloyId10);
+    }
+    function deleteItem(e) {
+        var index = e.itemIndex;
+        var thisModel = collectn.at(index);
+        thisModel.set({
+            isFavorite: false
+        });
+        thisModel.save();
+        collectn.remove(thisModel);
+        e.cancelBubble = true;
+        Ti.App.fireEvent("app:update");
+    }
+    function onClose() {
+        Ti.App.fireEvent("app:update");
+    }
+    function openItemInfo(e) {
+        var index = e.itemIndex;
+        var itemValues = collectn.at(index);
+        var ct = Alloy.createController("itemInfo", {
+            model: itemValues,
+            index: index,
+            collection: collectn
+        });
+        ct.getView().open();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "favorite";
@@ -27,17 +51,28 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    Alloy.Collections.instance("item");
+    var __defers = {};
+    $.items = Alloy.createCollection("item");
     $.__views.favorite = Ti.UI.createWindow({
-        backgroundColor: "white",
+        backgroundColor: "#fff",
         modal: false,
         layout: "vertical",
+        backgroundImage: "/images/background.png",
         id: "favorite"
     });
     $.__views.favorite && $.addTopLevelView($.__views.favorite);
+    onClose ? $.__views.favorite.addEventListener("close", onClose) : __defers["$.__views.favorite!close!onClose"] = true;
     $.__views.header = Alloy.createWidget("com.hashapps.widgets.titlebar", "widget", {
         width: Ti.UI.FILL,
-        height: "10%",
+        leftNavButton: {
+            height: "60%",
+            width: "17%",
+            top: "7%",
+            title: "",
+            visible: true,
+            backgroundImage: "/images/btn_back_normal.png",
+            backgroundSelectedImage: "/images/btn_back_pressed.png"
+        },
         id: "header",
         __parentSymbol: $.__views.favorite
     });
@@ -46,17 +81,16 @@ function Controller() {
         layout: "horizontal",
         width: Ti.UI.FILL,
         height: "80%",
-        backgroundColor: "black",
         id: "mid"
     });
     $.__views.favorite.add($.__views.mid);
-    var __alloyId2 = {};
-    var __alloyId4 = [];
-    var __alloyId6 = {
+    var __alloyId0 = {};
+    var __alloyId2 = [];
+    var __alloyId3 = {
         type: "Ti.UI.View",
         childTemplates: function() {
-            var __alloyId7 = [];
-            var __alloyId8 = {
+            var __alloyId4 = [];
+            var __alloyId5 = {
                 type: "Ti.UI.ImageView",
                 bindId: "image",
                 properties: {
@@ -66,8 +100,8 @@ function Controller() {
                     bindId: "image"
                 }
             };
-            __alloyId7.push(__alloyId8);
-            var __alloyId9 = {
+            __alloyId4.push(__alloyId5);
+            var __alloyId6 = {
                 type: "Ti.UI.Label",
                 bindId: "name",
                 properties: {
@@ -75,13 +109,32 @@ function Controller() {
                     bindId: "name"
                 }
             };
-            __alloyId7.push(__alloyId9);
-            return __alloyId7;
+            __alloyId4.push(__alloyId6);
+            var __alloyId8 = {
+                type: "Ti.UI.ImageView",
+                properties: {
+                    backgroundImage: "/images/btn_delete_normal.png",
+                    backgroundSelectedImage: "/images/btn_delete_pressed.png",
+                    left: "5%",
+                    width: "6%",
+                    height: "45%"
+                },
+                events: {
+                    click: deleteItem
+                }
+            };
+            __alloyId4.push(__alloyId8);
+            return __alloyId4;
         }(),
-        properties: {}
+        properties: {
+            backgroundImage: "/images/list.png"
+        },
+        events: {
+            click: openItemInfo
+        }
     };
-    __alloyId4.push(__alloyId6);
-    var __alloyId3 = {
+    __alloyId2.push(__alloyId3);
+    var __alloyId1 = {
         properties: {
             layout: "horizontal",
             height: Ti.UI.SIZE,
@@ -89,25 +142,24 @@ function Controller() {
             right: 10,
             name: "mt3m"
         },
-        childTemplates: __alloyId4
+        childTemplates: __alloyId2
     };
-    __alloyId2["mt3m"] = __alloyId3;
-    var __alloyId10 = [];
-    var __alloyId12 = [];
+    __alloyId0["mt3m"] = __alloyId1;
+    var __alloyId9 = [];
+    var __alloyId11 = [];
     $.__views.section = Ti.UI.createListSection({
         id: "section"
     });
-    __alloyId10.push($.__views.section);
-    $.__views.section.items = __alloyId12;
-    var __alloyId16 = Alloy.Collections["item"] || item;
-    __alloyId16.on("fetch destroy change add remove reset", __alloyId17);
+    __alloyId9.push($.__views.section);
+    $.__views.section.items = __alloyId11;
+    var __alloyId15 = Alloy.Collections["$.items"] || $.items;
+    __alloyId15.on("fetch destroy change add remove reset", __alloyId16);
     $.__views.list = Ti.UI.createListView({
         width: Ti.UI.FILL,
         height: Ti.UI.FILL,
-        backgroundColor: "green",
         textAlign: "right",
-        sections: __alloyId10,
-        templates: __alloyId2,
+        sections: __alloyId9,
+        templates: __alloyId0,
         id: "list"
     });
     $.__views.mid.add($.__views.list);
@@ -120,17 +172,23 @@ function Controller() {
     });
     $.__views.favorite.add($.__views.Ads);
     exports.destroy = function() {
-        __alloyId16.off("fetch destroy change add remove reset", __alloyId17);
+        __alloyId15.off("fetch destroy change add remove reset", __alloyId16);
     };
     _.extend($, $.__views);
-    var collection = Alloy.Collections.item;
-    var isFavorite = false;
-    collection.fetch({
+    arguments[0] || {};
+    var collectn = $.items;
+    var isFavorite = true;
+    $.header.title.text = "المفضلة";
+    collectn.fetch({
         query: {
             statement: "SELECT * FROM item WHERE isFavorite = ?",
             params: [ isFavorite ]
         }
     });
+    $.header.leftNavButton.addEventListener("click", function() {
+        $.favorite.close();
+    });
+    __defers["$.__views.favorite!close!onClose"] && $.__views.favorite.addEventListener("close", onClose);
     _.extend($, exports);
 }
 

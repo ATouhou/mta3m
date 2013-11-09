@@ -22,7 +22,7 @@ module.exports = [ {
     }
 }, {
     isApi: true,
-    priority: 1000.0056,
+    priority: 1000.006,
     key: "Label",
     style: {
         width: Ti.UI.SIZE,
@@ -178,7 +178,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0055,
+    priority: 10000.0059,
     key: "container",
     style: {
         backgroundColor: "white"

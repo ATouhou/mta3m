@@ -1,6 +1,6 @@
 <Alloy>
-	<Collection src="item" />
-	<Window class="container">
+	<Collection src="item" instance="true" id="items"/>
+	<Window class="container" onClose="onClose">
 		<Widget src="com.hashapps.widgets.titlebar" id="header"/>
 		<View id="mid">
 						
@@ -9,15 +9,16 @@
 				<Templates>
 					
 					<ItemTemplate id="item" name="mt3m">
-						<View>
+						<View id="row" onClick="openItemInfo">
 							<ImageView bindId="image" id="image"></ImageView>
 							<Label bindId="name" id="itemTitle"></Label>
+							<ImageView class="arrow" onClick="deleteItem"></ImageView>
 						</View>
 					</ItemTemplate>
 					
 				</Templates>
 				
-				<ListSection id="section" dataCollection="item">
+				<ListSection id="section" dataCollection="$.items">
 					<ListItem template="mt3m" name:text="{name}" image:image="{image}"/>
 				</ListSection>
 				

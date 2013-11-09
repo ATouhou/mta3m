@@ -19,18 +19,26 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.background = Ti.UI.createView({
-        backgroundColor: "white",
+        width: Ti.UI.FILL,
+        backgroundImage: "/images/header.png",
+        height: "14%",
+        textAlign: "center",
         top: 0,
+        backgroundColor: "white",
+        title: {
+            top: "25%"
+        },
         id: "background"
     });
     $.__views.background && $.addTopLevelView($.__views.background);
     $.__views.lblTitle = Ti.UI.createLabel(function() {
         var o = {};
         _.extend(o, {
-            color: "black",
-            font: Alloy.Globals.h1,
+            color: "white",
+            font: Alloy.Globals.customFont,
             width: "60%",
-            textAlign: "center"
+            textAlign: "center",
+            top: "25%"
         });
         Alloy.isTablet && _.extend(o, {
             color: "black",
@@ -45,17 +53,17 @@ function Controller() {
     }());
     $.__views.background.add($.__views.lblTitle);
     $.__views.imgLogo = Ti.UI.createImageView({
-        width: 36,
-        height: 36,
-        right: "2.5%",
+        width: Ti.UI.FILL,
+        height: Ti.UI.FILL,
         id: "imgLogo"
     });
     $.__views.background.add($.__views.imgLogo);
     $.__views.rightNavButton = Ti.UI.createButton({
         right: "2%",
+        top: "7%",
         title: "next",
-        height: "51.3%",
-        width: "9%",
+        height: "60%",
+        width: "12%",
         backgroundImage: "/images/btn_menu_icon_normal.png",
         backgroundSelectedImage: "/images/btn_menu_icon_pressed.png",
         visible: false,
@@ -68,9 +76,10 @@ function Controller() {
     $.__views.background.add($.__views.rightNavButton);
     $.__views.leftNavButton = Ti.UI.createButton({
         left: "2%",
-        width: "10%",
+        height: "60%",
+        width: "17%",
+        top: "7%",
         title: "ﺭﺟﻮﻉ",
-        height: "65%",
         visible: false,
         font: {
             fontSize: 12,
@@ -97,7 +106,6 @@ function Controller() {
             $.lblTitle.text = win.title;
         }, 100);
     };
-    $.background.setHeight(.07 * Titanium.Platform.displayCaps.platformHeight);
     $.background.setWidth(1 * Titanium.Platform.displayCaps.platformWidth);
     __defers["$.__views.leftNavButton!click!doClick"] && $.__views.leftNavButton.addEventListener("click", doClick);
     _.extend($, exports);

@@ -169,84 +169,127 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0058,
+    priority: 10000.0062,
     key: "container",
     style: {
-        backgroundColor: "white",
-        layout: "vertical"
+        layout: "vertical",
+        backgroundImage: "/images/background.png"
     }
 }, {
     isClass: true,
-    priority: 10000.0059,
+    priority: 10000.0063,
+    key: "phoneBack",
+    style: {
+        top: 3,
+        backgroundImage: "/images/phone_box.png",
+        width: "90%",
+        height: "17%"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0064,
     key: "lbl",
     style: {
-        color: "white"
-    }
-}, {
-    isId: true,
-    priority: 100000.006,
-    key: "header",
-    style: {
-        width: Ti.UI.FILL,
-        height: "10%"
-    }
-}, {
-    isId: true,
-    priority: 100000.0061,
-    key: "mid",
-    style: {
-        layout: "horizontal",
-        height: "35%",
-        width: Ti.UI.FILL,
-        backgroundColor: "red"
-    }
-}, {
-    isId: true,
-    priority: 100000.0062,
-    key: "nums",
-    style: {
-        left: 0,
-        width: "50%",
-        height: Ti.UI.FILL,
-        backgroundColor: "black",
-        layout: "vertical"
-    }
-}, {
-    isId: true,
-    priority: 100000.0063,
-    key: "number1",
-    style: {
-        top: 10
-    }
-}, {
-    isId: true,
-    priority: 100000.0064,
-    key: "desc",
-    style: {
-        width: "50%",
-        height: Ti.UI.FILL,
-        backgroundColor: "yellow"
+        color: "black"
     }
 }, {
     isId: true,
     priority: 100000.0065,
-    key: "mapView",
+    key: "header",
     style: {
-        bottom: 5,
-        height: "50%",
-        width: Ti.UI.FILL
+        width: Ti.UI.FILL,
+        height: "14%",
+        title: {
+            top: "25%"
+        },
+        rightNavButton: {
+            height: "60%",
+            width: "12%",
+            top: "7%",
+            title: "",
+            visible: true
+        },
+        leftNavButton: {
+            height: "60%",
+            width: "17%",
+            top: "7%",
+            title: "",
+            visible: true,
+            backgroundImage: "/images/btn_back_normal.png",
+            backgroundSelectedImage: "/images/btn_back_pressed.png"
+        }
     }
 }, {
     isId: true,
     priority: 100000.0066,
-    key: "wsalny",
+    key: "mid",
     style: {
-        width: "80%",
-        bottom: 10
+        layout: "horizontal",
+        height: "40%",
+        width: Ti.UI.FILL
     }
 }, {
     isId: true,
     priority: 100000.0067,
+    key: "info",
+    style: {
+        width: "60%",
+        height: Ti.UI.FILL,
+        layout: "vertical"
+    }
+}, {
+    isId: true,
+    priority: 100000.0068,
+    key: "imgAndTit",
+    style: {
+        width: Ti.UI.FILL,
+        height: "40%"
+    }
+}, {
+    isId: true,
+    priority: 100000.0069,
+    key: "mt3mTitle",
+    style: {}
+}, {
+    isId: true,
+    priority: 100000.007,
+    key: "mt3mPic",
+    style: {
+        right: "5%",
+        width: "25%",
+        height: "75%",
+        backgroundImage: "/images/default_icon.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0071,
+    key: "number1",
+    style: {
+        top: 10,
+        color: "black"
+    }
+}, {
+    isId: true,
+    priority: 100000.0072,
+    key: "mapView",
+    style: {
+        bottom: 0,
+        height: "60%",
+        width: Ti.UI.FILL
+    }
+}, {
+    isId: true,
+    priority: 100000.0073,
+    key: "wsalny",
+    style: {
+        width: "40%",
+        height: Ti.UI.FILL,
+        backgroundImage: "/images/btn_waslny_normal.png",
+        backgroundSelectedImage: "/images/btn_waslny_pressed.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0074,
     key: "phone",
     style: {
         top: 10

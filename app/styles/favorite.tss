@@ -1,19 +1,26 @@
 ".container" : {
-  backgroundColor : "white",
-  layout : "vertical"
+  layout : "vertical",
+  	backgroundImage : '/images/background.png'
 }
 
 
 "#header":{
 	width : Ti.UI.FILL,
-	height : "10%"
+	leftNavButton:{
+		height : '60%',
+		width : "17%",
+		top : '7%',
+		title:'',
+		visible:true,
+		backgroundImage : '/images/btn_back_normal.png',
+		backgroundSelectedImage : '/images/btn_back_pressed.png'
+	}
 }
 
 "#mid": {
 	layout : "horizontal",
 	width : Ti.UI.FILL,
 	height : "80%",
-	backgroundColor : "black",
 	
 }
 
@@ -21,9 +28,20 @@
 "#list": {
 	width : Ti.UI.FILL,
 	height : Ti.UI.FILL,
-	backgroundColor : "green",
 	textAlign: 'right',
 	
+}
+
+"#row":{
+	backgroundImage : '/images/list.png',
+}
+
+".arrow": {
+	 backgroundImage : "/images/btn_delete_normal.png",
+	 backgroundSelectedImage : "/images/btn_delete_pressed.png",
+	left : '5%',
+	width : '6%',
+	height : '45%'
 }
 
 "#Ads": {

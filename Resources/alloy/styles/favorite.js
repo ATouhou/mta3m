@@ -172,8 +172,19 @@ module.exports = [ {
     priority: 10000.0035,
     key: "container",
     style: {
-        backgroundColor: "white",
-        layout: "vertical"
+        layout: "vertical",
+        backgroundImage: "/images/background.png"
+    }
+}, {
+    isClass: true,
+    priority: 10000.004,
+    key: "arrow",
+    style: {
+        backgroundImage: "/images/btn_delete_normal.png",
+        backgroundSelectedImage: "/images/btn_delete_pressed.png",
+        left: "5%",
+        width: "6%",
+        height: "45%"
     }
 }, {
     isId: true,
@@ -181,7 +192,15 @@ module.exports = [ {
     key: "header",
     style: {
         width: Ti.UI.FILL,
-        height: "10%"
+        leftNavButton: {
+            height: "60%",
+            width: "17%",
+            top: "7%",
+            title: "",
+            visible: true,
+            backgroundImage: "/images/btn_back_normal.png",
+            backgroundSelectedImage: "/images/btn_back_pressed.png"
+        }
     }
 }, {
     isId: true,
@@ -190,8 +209,7 @@ module.exports = [ {
     style: {
         layout: "horizontal",
         width: Ti.UI.FILL,
-        height: "80%",
-        backgroundColor: "black"
+        height: "80%"
     }
 }, {
     isId: true,
@@ -200,12 +218,18 @@ module.exports = [ {
     style: {
         width: Ti.UI.FILL,
         height: Ti.UI.FILL,
-        backgroundColor: "green",
         textAlign: "right"
     }
 }, {
     isId: true,
     priority: 100000.0039,
+    key: "row",
+    style: {
+        backgroundImage: "/images/list.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0041,
     key: "Ads",
     style: {
         bottom: 0,
@@ -215,7 +239,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.004,
+    priority: 100000.0042,
     key: "item",
     style: {
         layout: "horizontal",
@@ -225,7 +249,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0041,
+    priority: 100000.0043,
     key: "image",
     style: {
         right: 0,
@@ -234,7 +258,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0042,
+    priority: 100000.0044,
     key: "itemTilte",
     style: {
         color: "black",
